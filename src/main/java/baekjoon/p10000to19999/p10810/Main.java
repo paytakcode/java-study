@@ -1,4 +1,4 @@
-package baekjoon.p10811;
+package baekjoon.p10000to19999.p10810;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -12,25 +12,20 @@ public class Main {
 	public void solution() throws IOException{
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		String nm = br.readLine();
-		StringTokenizer st = new StringTokenizer(nm);
+		String str = br.readLine();
+		StringTokenizer st = new StringTokenizer(str);
 		StringBuilder sb = new StringBuilder();
 		int n = Integer.parseInt(st.nextToken());
 		int m = Integer.parseInt(st.nextToken());
 		int[] baskets = new int[n];
-		for (int i = 0; i < n; i++){
-			baskets[i] = i + 1;
-		}
 		for (int t = 0; t < m; t++){
-			String ij = br.readLine();
-			st = new StringTokenizer(ij);
-			int i = Integer.parseInt(st.nextToken()) - 1;
-			int j = Integer.parseInt(st.nextToken()) - 1;
-			int k = (j - i) / 2;
-			for (int o = 0; o <= k; o++){
-				int temp = baskets[i + o];
-				baskets[i + o] = baskets[j - o];
-				baskets[j - o] = temp;
+			String ijk = br.readLine();
+			StringTokenizer st2 = new StringTokenizer(ijk);
+			int i = Integer.parseInt(st2.nextToken());
+			int j = Integer.parseInt(st2.nextToken());
+			int k = Integer.parseInt(st2.nextToken());
+			for (int b = i - 1; b < j; b++){
+				baskets[b] = k;
 			}
 		}
 		for (int basket : baskets) {

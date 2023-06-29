@@ -1,4 +1,4 @@
-package baekjoon.p25314;
+package baekjoon.p20000to29999.p25314;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

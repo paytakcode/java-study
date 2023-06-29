@@ -1,4 +1,4 @@
-package baekjoon.p2557;
+package baekjoon.p1to9999.p2557;
 
 import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
